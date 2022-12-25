@@ -25,8 +25,8 @@
         <meta name="theme-color" content="#ffffff">
         <!-- favorite icon end -->
 </head>
-<body>
-    <style>
+
+<style>
     .block {
         padding: 10px;
         background: rgb(255, 61, 61);
@@ -39,6 +39,9 @@
         color: #fff;}
     </style>
 
+<body>
+    
+
     <div class="block">
         <h1>fan bing wen V3</h1>
         <h2>h2</h2>
@@ -48,10 +51,16 @@
         <h6>h6</h6>
     </div>
     <div class="block2" >
-        <ul style="list-style-type:none">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+        <ul style="display:flex; align-items: center; justify-content: center">
+            <li style="display:inline;">
+                <a href="#about-us">關於我們</a>
+            </li>
+            <li style="display:inline;">
+                <a href="#production">商品介紹</a>
+            </li>
+            <li style="display:inline;">
+                <a href="#contact-us">聯絡我們</a>
+            </li>
         </ul>
     </div>
 
@@ -60,7 +69,29 @@
     <img src="img/dog.jpeg" alt="this is dog" title="this is dog" />
     
     <div>
-        <span style="color:red;">我</span>很好！
+        <span style="color:red;">注意!</span>測試檔，非正式使用
     </div>
+
+
+    <button id="do-test">只是個按鈕</button>
+    <button id="do-btn"><a href="https://book.niceinfos.com/site/20220424/sardine/">學生範例</a></button>
+
+    <script>
+        let btn = document.querySelector('#do-test')
+    
+        btn.addEventListener('click', (e) => {
+            alert('測試成功')
+        })
+    </script>
+
+    <script>
+        let btn2 = document.querySelector('#do-btn')
+
+        btn2.addEventListener('click', (e) => {
+            alert('將前往網站')
+        })
+    </script>
+    
+
 </body>
 </html>
