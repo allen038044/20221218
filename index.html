@@ -27,6 +27,15 @@
 </head>
 
 <style>
+    th, td {
+        border: 1px solid #000;}
+    table {
+            border-spacing: 0;
+            border-collapse: collapse;}
+</style>
+    
+
+<style>
     .block {
         padding: 10px;
         background: rgb(255, 61, 61);
@@ -37,14 +46,14 @@
         padding: 10px;
         background: rgb(52, 136, 255);
         color: #fff;}
-    </style>
+</style>
 
 <body>
     
 
     <div class="block">
-        <h1>fan bing wen V3</h1>
-        <h2>h2</h2>
+        <h1>歡迎赫綵設計學院</h1>
+        <h2>加入赫綵，人生精彩</h2>
         <h3>h3</h3>
         <h4>h4</h4>
         <h5>h5</h5>
@@ -64,6 +73,54 @@
         </ul>
     </div>
 
+    <div id="about-us" style="height: 100vh; background:yellow;">
+        <h1>關於我們</h1>
+        <iframe
+         width="560"
+          height="315"
+           src="https://www.youtube.com/embed/zT1aVMcoYqE"
+            title="YouTube video player"
+             frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen>
+            </iframe>
+    </div>
+
+    <div id="production" style="height: 100vh; background:green;">
+        <h1>師資介紹</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>老師</th>
+                    <th>科系</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>David</td>
+                    <td>網頁設計</td>
+                </tr>
+                <tr>
+                    <td>Helen</td>
+                    <td>平面設計</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="contact-us" style="height: 100vh; background:red;">
+        <h1>聯絡我們</h1>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.1635158286301!2d120.68512302247585!3d24.14878408587181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d68fe76583d%3A0x4ae16754ccc83ff5!2z5rC05Yip5aSn5qiTKOWwiuizouWkp-aokyk!5e0!3m2!1szh-TW!2stw!4v1671949183867!5m2!1szh-TW!2stw" 
+                    width="100%" 
+                        height="450" 
+                            style="border:0;" 
+                                allowfullscreen="" 
+                                    loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+    </div>
+
     <div>教學網站 <a href="https://book.niceinfos.com/frontend/book/">To book niceinfos</a></div>
     
     <img src="img/dog.jpeg" alt="this is dog" title="this is dog" />
@@ -74,8 +131,6 @@
 
 
     <button id="do-test">只是個按鈕</button>
-    <button id="do-btn"><a href="https://book.niceinfos.com/site/20220424/sardine/">學生範例</a></button>
-
     <script>
         let btn = document.querySelector('#do-test')
     
@@ -84,6 +139,7 @@
         })
     </script>
 
+    <button id="do-btn"><a href="https://book.niceinfos.com/site/20220424/sardine/">學生範例</a></button>
     <script>
         let btn2 = document.querySelector('#do-btn')
 
@@ -91,7 +147,50 @@
             alert('將前往網站')
         })
     </script>
-    
+
+
+
+<div>註冊你腳色的新身分
+    <form method="POST" action="https://book.niceinfos.com/frontend/assets/html_contact_form/api.php">
+        <div>
+            <label for="f-fullname">帳號:</label>
+            <input type="text" name="account" value="" placeholder="請輸入帳號" id="f-fullname">
+        </div>
+        <div>
+            <label for="f-password">密碼:</label>
+            <input type="password" name="password" placeholder="請輸入密碼" id="f-password">
+        </div>
+        <div>
+            <label for="f-tel">電話:</label>
+            <input type="tel" name="phone" placeholder="請輸入電話" id="f-tel">
+        </div>
+        <div>
+            <label for="f-number">官方驗證碼:</label>
+            <input type="number" name="auth" placeholder="請輸入驗證數字" id="f-number">
+        </div>
+        <div>
+            <label for="f-color">選你喜歡或代表你自己的顏色:</label>
+            <input type="color" name="color" placeholder="請輸入顏色" id="f-color">
+        </div>
+        <div>
+            <label for="f-county">你的居住地:</label>
+            <select name="county" id="f-county">
+                <option>請選擇縣市</option>
+                <option value="TP">台北天龍國</option>
+                <option value="TC">台中8+9幫</option>
+                <option value="DG">高雄發大財</option>
+            </select>
+        </div>
+        <div>
+            <label for="f-date">你的生日:</label>
+            <input type="date" name="date" placeholder="請輸入日期" id="f-date">
+        </div>
+        <div>
+            <button type="submit">發送</button>
+            <button type="button">預覽</button>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>
