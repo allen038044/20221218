@@ -1,0 +1,21 @@
+th, td {
+    border: 1px solid #000;}
+table {
+        border-spacing: 0;
+        border-collapse: collapse;}
+.block {
+    padding: 10px;
+    background: rgb(255, 61, 61);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #fff;}
+.block2 {
+    padding: 10px;
+    background: rgb(52, 136, 255);
+    color: #fff;}
+.block3 {
+    padding: 10px;
+    background: rgb(31, 32, 32);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #fff;}
