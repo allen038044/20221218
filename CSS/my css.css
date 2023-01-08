@@ -19,3 +19,76 @@ table {
     margin-bottom: 20px;
     margin-top: 20px;
     color: #fff;}
+
+    .box {
+        width: 100px;
+        height: 100px;
+        line-height: 80px;
+        background-color: #429b9e;
+        background-size:cover;
+        /* background-image: url(/img/dog2.jpg); */
+        background-image: url(../img/dog2.jpg);
+        text-align: center;
+        margin: auto;
+        border: 2px solid red;
+        padding: 10px;
+        box-sizing: border-box;
+        word-break: break-all;
+        color:rgb(237, 245, 239);
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'East Sea Dokdo', cursive;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    /* .box {
+        width: 100px; 寬
+        height: 100px; 高
+        line-height: 80px; 行高
+        background-color: #429b9e; background指背景(背景-背景屬性)
+        background-size:cover; cover為背景圖整個「不變形」、「寬高等比例」、「在必要時局部裁切」的鋪滿整個容器空間
+        background-image: url(../img/dog2.jpg); 背景置入圖片
+        text-align: center; 文字水平對齊-置中
+        margin: auto; 指元素外圍和其他元素的距離簡稱外距 auto-(左右)自動等距
+        margin-bottom: 50px; 下邊界
+        margin-top: 50px; 上邊界
+        padding: 10px; 內距
+        border: 2px solid red; 邊線
+        box-sizing: border-box; 
+        ^設定物件尺寸的計算方式-border-box為寬高設定作用在邊框外緣的範圍內，Content-box 則為寬高設定作用在內容範圍(一般預設)
+        word-break: break-all; 自動換行-任意位置斷行
+        color:rgb(1, 190, 42); 文字顏色
+        font-size: 50px; 字級(極限10px)
+        font-weight: 400; 字粗(數值100-900或打指令)
+        font-family: 'East Sea Dokdo', cursive; 字體 (若下載字體要在html置入官方字體連結)
+
+    } */
+
+    .button {
+        /* width: 100px;
+        height: 50px;
+        line-height: 50px; 
+        ^若使用到display，就不必再使用寬 高 行距屬性
+        */
+        background: #3564e4;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        padding:10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    /* display: inline-block; 
+    ^顯示模式(display)分為行內元素(inline)與區塊元素(block)
+    <inline-block>即為以inline的方式呈現，但同時擁有block的屬性
+    可設定元素的寬高(margin/padding) 且可水平排列
+    
+    text-align: center;
+    
+    padding:10px 20px;
+    ^數值分配分為3組:上下左右/上下、左右/上、右、下、左
+    
+    margin-top: 20px;
+    border-radius: 5px; 圓角
+     */
