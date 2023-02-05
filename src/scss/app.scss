@@ -1,0 +1,24 @@
+/*非通用*/
+@import 'reset';
+
+h1 {
+    color: red;
+}
+
+.hover-demo {
+    width: 80%;
+    height: 100px;
+    background: red;
+    color: yellow;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+
+    &:hover {
+        background: blue;
+        color: #fff;
+    }
+}

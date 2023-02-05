@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*非通用*/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+h1 {
+  color: red;
+}
+
+.hover-demo {
+  width: 80%;
+  height: 100px;
+  background: red;
+  color: yellow;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.hover-demo:hover {
+  background: blue;
+  color: #fff;
+}/*# sourceMappingURL=app.css.map */
