@@ -1,0 +1,81 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.accrodion {
+  margin: 20px auto;
+}
+.accrodion .tab {
+  border: 3px solid rgb(204, 59, 14);
+  border-bottom-width: 0;
+  /*>input:checked+.tab-content {
+      display: block;
+  }*/
+  /*對應<input type="checkbox" id="tab-x">
+      <div class="tab-content">Hello x</div>*/
+}
+.accrodion .tab:last-child {
+  border-bottom-width: 3px;
+}
+.accrodion .tab > label {
+  display: flex;
+  background: rgb(54, 73, 245);
+  color: #fff;
+  padding: 12px;
+  /*font-size: 26px;*/
+  font-weight: 700;
+  font-family: monospace;
+  cursor: pointer; /*指標顯示(指定對象)樣式*/
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /*選取文字樣式:不可選取*/
+  justify-content: space-between;
+  align-items: center;
+  /*觸發顯示樣式*/
+}
+.accrodion .tab > label > div {
+  font-size: 26px;
+}
+.accrodion .tab > label:hover {
+  background: rgb(255, 105, 36);
+}
+.accrodion .tab > label .close-icon {
+  display: none;
+}
+.accrodion .tab .tab-content {
+  padding: 10px;
+  display: none;
+}
+.accrodion .tab > input:checked {
+  /*「>」選取器是:>input:checked {...}<>「僅選到下一個層」的物件*
+  /*「+」嚴謹選取器:input:checked+.label{...}<與A相鄰的B>這兩者需相鄰不能有隔閡，相鄰者內屬性都會影響*/
+  /*「~」寬鬆選取器:input:checked...~.tab-content<從A到B>:在這兩者之間屬性都會影響*/
+}
+.accrodion .tab > input:checked + label {
+  /*<div class="open-icon">+</div>*/
+  /*<div class="close-icon">-</div>*/
+}
+.accrodion .tab > input:checked + label .open-icon {
+  display: none;
+}
+.accrodion .tab > input:checked + label .close-icon {
+  display: block;
+}
+.accrodion .tab > input:checked ~ .tab-content {
+  display: block;
+}
+.accrodion .tab > input {
+  display: none;
+}/*# sourceMappingURL=accrodion.css.map */

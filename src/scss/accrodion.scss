@@ -1,0 +1,74 @@
+@import 'reset';
+
+.accrodion {
+    margin: 20px auto;
+
+    .tab {
+        border: 3px solid rgb(204, 59, 14);
+        border-bottom-width: 0;
+
+        &:last-child {
+            border-bottom-width: 3px;
+        }
+
+        >label {
+            display: flex;
+            background: rgb(54, 73, 245);
+            color: #fff;
+            padding: 12px;
+            /*font-size: 26px;*/
+            font-weight: 700;
+            font-family: monospace;
+            cursor: pointer;/*指標顯示(指定對象)樣式*/
+            user-select: none;/*選取文字樣式:不可選取*/
+            justify-content: space-between;
+            align-items: center;
+
+            >div {
+                font-size: 26px;
+            }
+
+            &:hover {
+                background: rgb(255, 105, 36);
+            }/*觸發顯示樣式*/
+
+            .close-icon {
+                display: none;
+            }
+        }
+
+        .tab-content {
+            padding: 10px;
+            display: none;
+        }
+
+        >input:checked {
+            +label {
+                .open-icon {
+                    display: none;
+                }/*<div class="open-icon">+</div>*/
+
+                .close-icon {
+                    display: block;
+                }/*<div class="close-icon">-</div>*/
+            }
+
+            ~.tab-content {
+                display: block;
+            }
+            /*「>」選取器是:>input:checked {...}<>「僅選到下一個層」的物件*
+            /*「+」嚴謹選取器:input:checked+.label{...}<與A相鄰的B>這兩者需相鄰不能有隔閡，相鄰者內屬性都會影響*/
+            /*「~」寬鬆選取器:input:checked...~.tab-content<從A到B>:在這兩者之間屬性都會影響*/
+        }
+
+        >input {
+            display: none;
+        }
+
+        /*>input:checked+.tab-content {
+            display: block;
+        }*/
+        /*對應<input type="checkbox" id="tab-x">
+            <div class="tab-content">Hello x</div>*/
+    }
+}
