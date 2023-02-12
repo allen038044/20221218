@@ -1,0 +1,122 @@
+@import 'reset';
+/*單一原則範例*/
+// body {
+//     background: #000;
+// }
+
+// .header,
+// .header2,
+// .header3,
+// .header4 {
+//     background: #fff;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+// .header2 {
+//     .container {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+// .header3 {
+//     .header-content {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+// .header4 {
+//     .header-content {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+body {
+    background: #000;
+}
+
+// .header {
+//     background: #fff;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 20px;
+//     border-radius: 10px;
+//     border-top-right-radius: 0;
+//     border-top-left-radius: 0;
+// }
+
+.header {
+    // position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .header-content {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    
+    .menu {
+        list-style-type: none;
+        display: flex;
+    
+        li {
+            margin-left: 10px;
+            font-weight: 700;
+            text-align: center;
+    
+            &:first-child {
+                margin-left: 0;
+            }
+    
+            //     margin-right: 10px;
+            //     &:last-child {
+            //         margin-right: 0;
+            //     }
+    
+            &:hover {
+                color: aqua;
+                transition: 0.8s;
+            }
+        }
+        .en{
+            font-size: 14px;
+            font-family: monospace;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.join-form {
+    // 也可用內距壓縮出文字內容，
+    // 但 .join-form-content 的 min-height: 100vh;
+    // 需刪除
+    min-height: 100vh;
+    color: #fff;
+    background: #000;
+    background-image: url(../img/banner.jpeg);
+    background-size: cover;
+
+    .join-form-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+}
+

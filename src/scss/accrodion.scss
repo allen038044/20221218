@@ -41,34 +41,63 @@
             padding: 10px;
             display: none;
         }
+        /*方案一:使用input*/
+        // >input:checked {
+        //     +label {
+        //         .open-icon {
+        //             display: none;
+        //         }/*<div class="open-icon">+</div>*/
 
-        >input:checked {
+        //         .close-icon {
+        //             display: block;
+        //         }/*<div class="close-icon">-</div>*/
+        //     }
+
+        //     ~.tab-content {
+        //         display: block;
+        //     }
+        //     /*「>」選取器是:>input:checked {...}<>「僅選到下一個層」的物件*
+        //     /*「+」嚴謹選取器:input:checked+.label{...}<與A相鄰的B>這兩者需相鄰不能有隔閡，相鄰者內屬性都會影響*/
+        //     /*「~」寬鬆選取器:input:checked...~.tab-content<從A到B>:在這兩者之間屬性都會影響*/
+        // }
+
+        // >input {
+        //     display: none;
+        // }
+
+        // /*>input:checked+.tab-content {
+        //     display: block;
+        // }*/
+        // /*對應<input type="checkbox" id="tab-x">
+        //     <div class="tab-content">Hello x</div>*/
+        /**
+        *   屬性選擇器解決方案
+        **/
+        // >input[type=radio],
+        // >input[type=checkbox] {
+        //     display: none;
+        // }
+
+        /*方案二:使用class*/
+        .tab-switch:checked {
             +label {
+                background: rgb(255, 105, 36);
+
                 .open-icon {
                     display: none;
-                }/*<div class="open-icon">+</div>*/
+                }
 
                 .close-icon {
                     display: block;
-                }/*<div class="close-icon">-</div>*/
+                }
             }
 
             ~.tab-content {
                 display: block;
             }
-            /*「>」選取器是:>input:checked {...}<>「僅選到下一個層」的物件*
-            /*「+」嚴謹選取器:input:checked+.label{...}<與A相鄰的B>這兩者需相鄰不能有隔閡，相鄰者內屬性都會影響*/
-            /*「~」寬鬆選取器:input:checked...~.tab-content<從A到B>:在這兩者之間屬性都會影響*/
         }
-
-        >input {
+        .tab-switch {
             display: none;
         }
-
-        /*>input:checked+.tab-content {
-            display: block;
-        }*/
-        /*對應<input type="checkbox" id="tab-x">
-            <div class="tab-content">Hello x</div>*/
     }
 }
