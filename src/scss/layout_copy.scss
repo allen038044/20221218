@@ -72,9 +72,29 @@ body {
         border-top-left-radius: 0;
     }
 
-    .menu {
+    .menu ul {
         list-style-type: none;
         display: flex;
+
+        // li {
+        //     margin-left: 10px;
+        //     font-weight: 700;
+        //     text-align: center;
+
+        //     &:first-child {
+        //         margin-left: 0;
+        //     }
+
+        //     //     margin-right: 10px;
+        //     //     &:last-child {
+        //     //         margin-right: 0;
+        //     //     }
+
+        //     &:hover {
+        //         color: aqua;
+        //         transition: 0.8s;
+        //     }
+        // }(原本只針對電腦版的格式)
 
         li {
             margin-left: 10px;
@@ -85,14 +105,8 @@ body {
                 margin-left: 0;
             }
 
-            //     margin-right: 10px;
-            //     &:last-child {
-            //         margin-right: 0;
-            //     }
-
             &:hover {
-                color: aqua;
-                transition: 0.8s;
+                color: rgb(47, 47, 255);
             }
         }
 
