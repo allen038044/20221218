@@ -1,0 +1,29 @@
+.mobile-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    >span {
+        display: inline-block;
+        width: 30px;
+        height: 5px;
+        background: rgb(33, 165, 226);
+        margin-bottom: 5px;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        >span {
+            background: rgb(9, 12, 196);
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {}

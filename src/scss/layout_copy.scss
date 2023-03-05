@@ -1,0 +1,276 @@
+@import 'reset';
+/*單一原則範例*/
+// body {
+//     background: #000;
+// }
+
+// .header,
+// .header2,
+// .header3,
+// .header4 {
+//     background: #fff;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+// .header2 {
+//     .container {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+// .header3 {
+//     .header-content {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+// .header4 {
+//     .header-content {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+body {
+    background: #000;
+}
+
+// .header {
+//     background: #fff;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 20px;
+//     border-radius: 10px;
+//     border-top-right-radius: 0;
+//     border-top-left-radius: 0;
+// }
+
+.header {
+    // position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+
+    .header-content {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .menu {
+        list-style-type: none;
+        display: flex;
+
+        li {
+            margin-left: 10px;
+            font-weight: 700;
+            text-align: center;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            //     margin-right: 10px;
+            //     &:last-child {
+            //         margin-right: 0;
+            //     }
+
+            &:hover {
+                color: aqua;
+                transition: 0.8s;
+            }
+        }
+
+        .en {
+            font-size: 14px;
+            font-family: monospace;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.join-form {
+    // 也可用內距壓縮出文字內容，
+    // 但 .join-form-content 的 min-height: 100vh;
+    // 需刪除
+    // min-height: 100vh;
+    color: #fff;
+    background: #000;
+    background-image: url(../img/banner.jpeg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.438);
+        z-index: 1;
+    }
+
+    .join-form-content {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        min-height: 100vh;
+        position: relative;
+        z-index: 2;
+
+
+        .content-wrap {
+            background: rgba(14, 50, 80, 0.9);
+            display: flex;
+            width: 100%;
+
+            >div {
+                // background: rgba(14, 50, 80, 0.9);
+                // flex: 1;
+                width: 50%;
+                padding: 20px;
+                position: relative;
+
+
+                &:first-child::before {
+                    content: '';
+                    border-right: 3px dashed #fff;
+                    position: absolute;
+                    right: 0px;
+                    top: 20px;
+                    height: calc(100% - 40px);
+                }
+            }
+        }
+    }
+
+    .join-form-text {
+        font-size: 14px;
+        line-height: 30px;
+        text-align: justify;
+    }
+}
+
+.process-flow {
+    background: #000;
+    background-image: url(../img/process.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.438);
+        z-index: 1;
+    }
+
+    .process-wrap {
+        position: relative;
+        z-index: 2;
+        min-height: 50vh;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.flow {
+    margin-top: 50px;
+    position: relative;
+    padding: 20px 0;
+
+    &::after {
+        content: '';
+        border-left: 5px dashed #fff;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -3px;
+        z-index: 1;
+    }
+
+    .flow-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding: 20px 0;
+        margin-bottom: 15px;
+
+        // even為雙數 odd為奇數
+
+        &:nth-child(even) {
+            .flow-text {
+                right: 50%;
+                // 要把原先(flow-text的left與margin-left屬性清掉)
+                left: unset;
+                margin-right: 72px;
+                margin-left: unset;
+                text-align: left;
+            }
+        }
+
+        // position-元素的定位方式
+        // https://developer.mozilla.org/zh-CN/docs/Web/CSS/position
+    }
+
+    .flow-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50px;
+        background: red;
+        position: relative;
+        z-index: 2;
+    }
+
+    .flow-text {
+        position: absolute;
+        background: blue;
+        padding: 20px;
+        border-radius: 10px;
+        left: 50%;
+        margin-left: 72px;
+        text-align: right;
+    }
+}
+
+.footer {
+    background: #fff;
+    padding: 50px 0;
+    text-align: right;
+
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@import 'layout_rwd_mobile';
