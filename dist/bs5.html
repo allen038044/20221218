@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5.3</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #login-form .alert {
+            display: none;
+        }
+
+        /* input[type=checkbox] {
+            display: none;
+        } 針對所有checkbox */
+
+        #login-form input[type=checkbox] {
+            display: none;
+        }
+
+        /* 只針對標籤login-form的checkbox */
+
+        #success-switch:checked~.alert-success {
+            display: block;
+        }
+
+        #fail-switch:checked~.alert-danger {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello Bootstrap</h1>
+        <div class="row">
+            <div class="col-sm-6 mb-2">
+                <div class="bg-primary">
+                    <img src="img/dog.jpeg" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-sm-6 mb-2">
+                <div class="bg-primary">COL 2</div>
+            </div>
+            <div class="col-sm-6 mb-2">
+                <div class="bg-primary">COL 3</div>
+            </div>
+            <div class="col-sm-6 mb-2">
+                <div class="bg-primary">COL 4</div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <!-- 由這個div(<div class="table-responsive">)包住下列表格並用卷軸方式以防破版 -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Davidf,111111111111111111111111111111111111111111111</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>David</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>David</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>David</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>David</td>
+                        <td>18</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mb-4">
+            <button class="btn btn-primary">Button 1</button>
+
+            <a href="https://www.google.com" target="_blank" class="btn btn-danger">GOOGLE</a>
+
+            <input type="checkbox" id="test-1">
+            <label for="test-1" class="btn btn-success">Switch</label>
+        </div>
+
+        <div class="container">
+            <div id="login-form" class="mb-4">
+                <h1>System Login</h1>
+                <input type="checkbox" id="success-switch">
+                <input type="checkbox" id="fail-switch">
+                <div class="alert alert-success">Login Success!</div>
+                <div class="alert alert-danger">Login Fail!</div>
+                <div class="mb-2">
+                    <label for="account" class="form-label">Account</label>
+                    <input type="text" class="form-control" id="account" name="account" placeholder="account">
+                </div>
+                <div class="mb-2">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                </div>
+                <div class="text-end">
+                    <label for="success-switch" class="btn btn-primary">Login Success</label>
+                    <label for="fail-switch" class="btn btn-danger">Login Fail</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="p-5 bg-dark text-white">
+            <h2 class="text-center ps-5 pe-5">System Login</h2>
+            <hr />
+            <div class="mb-3">
+                <label for="login-account" class="form-label">帳號</label>
+                <input type="text" class="form-control" id="login-account" />
+            </div>
+            <div class="mb-3">
+                <label for="login-password" class="form-label">密碼</label>
+                <input type="password" class="form-control" id="login-password" />
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="login-remember" />
+                <label for="login-remember" class="form-check-label">記住密碼</label>
+            </div>
+            <div class="text-end">
+                <button class="btn btn-sm btn-danger">登入</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/bootstrap.min.js"></script>
+
+</html>

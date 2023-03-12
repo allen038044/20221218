@@ -182,4 +182,28 @@
             width: 100%;
         }
     }
+
+    .flow {
+        &::after {
+            left: 30px;
+        }
+
+        .flow-item {
+            justify-content: flex-start;
+            padding-left: 12px;
+
+            &:nth-child(even) .flow-text {
+                right: unset;
+                left: 0;
+                margin-right: 0;
+                margin-left: 72px;
+                text-align: left;
+            }
+        }
+
+        .flow-text {
+            left: 0;
+        }
+    }
+
 }

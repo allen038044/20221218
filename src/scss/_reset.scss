@@ -8,6 +8,11 @@
     font-size: 24px;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 80%;
     height: 100%;

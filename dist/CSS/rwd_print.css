@@ -7,6 +7,11 @@
   font-size: 24px;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 80%;
   height: 100%;
@@ -49,9 +54,6 @@ a {
   color: #fff;
 }
 .form-control:focus::-moz-placeholder {
-  color: rgb(204, 204, 204);
-}
-.form-control:focus:-ms-input-placeholder {
   color: rgb(204, 204, 204);
 }
 .form-control:focus::placeholder {

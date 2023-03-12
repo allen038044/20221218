@@ -115,4 +115,21 @@
   .join-form .join-form-content .content-wrap .right-side {
     width: 100%;
   }
+  .flow::after {
+    left: 30px;
+  }
+  .flow .flow-item {
+    justify-content: flex-start;
+    padding-left: 12px;
+  }
+  .flow .flow-item:nth-child(even) .flow-text {
+    right: unset;
+    left: 0;
+    margin-right: 0;
+    margin-left: 72px;
+    text-align: left;
+  }
+  .flow .flow-text {
+    left: 0;
+  }
 }/*# sourceMappingURL=layout_rwd_mobile.css.map */
