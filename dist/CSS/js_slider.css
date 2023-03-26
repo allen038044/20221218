@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -130,63 +129,52 @@ a {
   display: inline-block;
 }
 
-.accrodion {
-  margin: 20px auto;
+.slider {
+  width: 100%;
+  height: 500px;
+  position: relative;
 }
-.accrodion .tab {
-  border: 3px solid rgb(204, 59, 14);
-  border-bottom-width: 0;
-  /*方案一:使用input*/
-  /**
-  *   屬性選擇器解決方案
-  **/
-  /*方案二:使用class*/
-}
-.accrodion .tab:last-child {
-  border-bottom-width: 3px;
-}
-.accrodion .tab > label {
+.slider .item > div {
   display: flex;
-  background: rgb(54, 73, 245);
-  color: #fff;
-  padding: 12px;
-  /*font-size: 26px;*/
-  font-weight: 700;
-  font-family: monospace;
-  cursor: pointer; /*指標顯示(指定對象)樣式*/
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; /*選取文字樣式:不可選取*/
-  justify-content: space-between;
   align-items: center;
-  /*觸發顯示樣式*/
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+  height: 100%;
+  background: #270e0e;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
 }
-.accrodion .tab > label > div {
-  font-size: 26px;
+.slider .item > div.active {
+  opacity: 1;
 }
-.accrodion .tab > label:hover {
-  background: rgb(255, 105, 36);
+.slider .circle {
+  position: absolute;
+  bottom: 5px;
+  z-index: 2;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.accrodion .tab > label .close-icon {
-  display: none;
+.slider .circle > span {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background: #fff;
+  margin-right: 10px;
+  cursor: pointer;
 }
-.accrodion .tab .tab-content {
-  padding: 10px;
-  display: none;
+.slider .circle > span > :last-child {
+  margin-right: 0;
 }
-.accrodion .tab .tab-switch:checked + label {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab .tab-switch:checked + label .open-icon {
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label .close-icon {
-  display: block;
-}
-.accrodion .tab .tab-switch:checked ~ .tab-content {
-  display: block;
-}
-.accrodion .tab .tab-switch {
-  display: none;
-}/*# sourceMappingURL=accrodion.css.map */
+.slider .circle > span.active {
+  background: rgb(22, 122, 161);
+}/*# sourceMappingURL=js_slider.css.map */

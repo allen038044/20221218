@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -130,63 +129,20 @@ a {
   display: inline-block;
 }
 
-.accrodion {
-  margin: 20px auto;
-}
-.accrodion .tab {
-  border: 3px solid rgb(204, 59, 14);
-  border-bottom-width: 0;
-  /*方案一:使用input*/
-  /**
-  *   屬性選擇器解決方案
-  **/
-  /*方案二:使用class*/
-}
-.accrodion .tab:last-child {
-  border-bottom-width: 3px;
-}
-.accrodion .tab > label {
+.clock {
+  margin-top: 20px;
   display: flex;
-  background: rgb(54, 73, 245);
-  color: #fff;
-  padding: 12px;
-  /*font-size: 26px;*/
-  font-weight: 700;
-  font-family: monospace;
-  cursor: pointer; /*指標顯示(指定對象)樣式*/
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; /*選取文字樣式:不可選取*/
-  justify-content: space-between;
   align-items: center;
-  /*觸發顯示樣式*/
 }
-.accrodion .tab > label > div {
-  font-size: 26px;
-}
-.accrodion .tab > label:hover {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab > label .close-icon {
-  display: none;
-}
-.accrodion .tab .tab-content {
-  padding: 10px;
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab .tab-switch:checked + label .open-icon {
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label .close-icon {
-  display: block;
-}
-.accrodion .tab .tab-switch:checked ~ .tab-content {
-  display: block;
-}
-.accrodion .tab .tab-switch {
-  display: none;
-}/*# sourceMappingURL=accrodion.css.map */
+.clock > div {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+}/*# sourceMappingURL=js_clock.css.map */

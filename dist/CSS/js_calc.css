@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -130,63 +129,47 @@ a {
   display: inline-block;
 }
 
-.accrodion {
-  margin: 20px auto;
+.calc {
+  margin-top: 30px;
+  font-family: "Courier New", Courier, monospace;
 }
-.accrodion .tab {
-  border: 3px solid rgb(204, 59, 14);
-  border-bottom-width: 0;
-  /*方案一:使用input*/
-  /**
-  *   屬性選擇器解決方案
-  **/
-  /*方案二:使用class*/
-}
-.accrodion .tab:last-child {
-  border-bottom-width: 3px;
-}
-.accrodion .tab > label {
-  display: flex;
-  background: rgb(54, 73, 245);
+
+#calc-total {
+  line-height: 80px;
+  background: #7a260d;
   color: #fff;
-  padding: 12px;
-  /*font-size: 26px;*/
-  font-weight: 700;
-  font-family: monospace;
-  cursor: pointer; /*指標顯示(指定對象)樣式*/
+  font-size: 40px;
+  font-weight: 800;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; /*選取文字樣式:不可選取*/
-  justify-content: space-between;
+          user-select: none;
+}
+.calc-row > div {
+  flex: 2;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
   align-items: center;
-  /*觸發顯示樣式*/
+  justify-content: center;
+  background: #dedede;
+  height: 60px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
-.accrodion .tab > label > div {
-  font-size: 26px;
+.calc-row > div:hover {
+  background: #ff4747;
+  color: #fff;
 }
-.accrodion .tab > label:hover {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab > label .close-icon {
-  display: none;
-}
-.accrodion .tab .tab-content {
-  padding: 10px;
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab .tab-switch:checked + label .open-icon {
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label .close-icon {
-  display: block;
-}
-.accrodion .tab .tab-switch:checked ~ .tab-content {
-  display: block;
-}
-.accrodion .tab .tab-switch {
-  display: none;
-}/*# sourceMappingURL=accrodion.css.map */
+.calc-row > div:last-child {
+  flex: 1;
+}/*# sourceMappingURL=js_calc.css.map */

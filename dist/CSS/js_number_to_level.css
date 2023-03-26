@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -130,63 +129,33 @@ a {
   display: inline-block;
 }
 
-.accrodion {
-  margin: 20px auto;
+.number-block {
+  margin-top: 10px;
 }
-.accrodion .tab {
-  border: 3px solid rgb(204, 59, 14);
-  border-bottom-width: 0;
-  /*方案一:使用input*/
-  /**
-  *   屬性選擇器解決方案
-  **/
-  /*方案二:使用class*/
+.number-block input {
+  border: 1px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.accrodion .tab:last-child {
-  border-bottom-width: 3px;
+
+.fn {
+  text-align: right;
 }
-.accrodion .tab > label {
-  display: flex;
-  background: rgb(54, 73, 245);
-  color: #fff;
-  padding: 12px;
-  /*font-size: 26px;*/
+
+#response {
+  border: 1px solid #dedede;
+  padding: 20px;
+  margin-top: 20px;
+  display: none;
+}
+#response.active {
+  display: block;
+}
+#response.fail > span {
+  color: red;
+}
+#response > span {
+  font-size: 30px;
   font-weight: 700;
-  font-family: monospace;
-  cursor: pointer; /*指標顯示(指定對象)樣式*/
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; /*選取文字樣式:不可選取*/
-  justify-content: space-between;
-  align-items: center;
-  /*觸發顯示樣式*/
-}
-.accrodion .tab > label > div {
-  font-size: 26px;
-}
-.accrodion .tab > label:hover {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab > label .close-icon {
-  display: none;
-}
-.accrodion .tab .tab-content {
-  padding: 10px;
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab .tab-switch:checked + label .open-icon {
-  display: none;
-}
-.accrodion .tab .tab-switch:checked + label .close-icon {
-  display: block;
-}
-.accrodion .tab .tab-switch:checked ~ .tab-content {
-  display: block;
-}
-.accrodion .tab .tab-switch {
-  display: none;
-}/*# sourceMappingURL=accrodion.css.map */
+  color: blue;
+}/*# sourceMappingURL=js_number_to_level.css.map */
