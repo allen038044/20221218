@@ -56,9 +56,6 @@ a {
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
-.form-control:focus:-ms-input-placeholder {
-  color: rgb(204, 204, 204);
-}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -129,38 +126,22 @@ a {
   display: inline-block;
 }
 
-.input-group {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-.input-group > :first-child {
-  margin-right: 20px;
-}
-.input-group > :last-child {
-  margin-left: 20px;
+.wrap {
+  margin-top: 20px;
 }
 
-#item {
-  list-style-type: none;
-}
-#item li {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.2s;
-  padding: 0 5px;
-}
-#item li > :first-child {
-  margin-right: 10px;
-}
-#item li:hover {
-  background: #1a6bc7;
+.rotate {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotate(45deg);
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#item li.delete > :last-child {
-  color: red;
-  text-decoration: line-through;
-}/*# sourceMappingURL=todo.css.map */
+.rotate .rotate-text {
+  font-size: 40px;
+  font-weight: 800;
+  transform: rotate(135deg);
+}/*# sourceMappingURL=transform.css.map */

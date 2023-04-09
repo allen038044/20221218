@@ -56,9 +56,6 @@ a {
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
-.form-control:focus:-ms-input-placeholder {
-  color: rgb(204, 204, 204);
-}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -149,7 +146,6 @@ a {
   align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .calc-row > div {

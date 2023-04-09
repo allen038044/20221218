@@ -56,9 +56,6 @@ a {
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
-.form-control:focus:-ms-input-placeholder {
-  color: rgb(204, 204, 204);
-}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -129,20 +126,33 @@ a {
   display: inline-block;
 }
 
-.clock {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
+.number-block {
+  margin-top: 10px;
 }
-.clock > div {
-  flex: 1;
-  background: #000;
-  color: #fff;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #fff;
+.number-block input {
+  border: 1px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fn {
+  text-align: right;
+}
+
+#response {
+  border: 1px solid #dedede;
+  padding: 20px;
+  margin-top: 20px;
+  display: none;
+}
+#response.active {
+  display: block;
+}
+#response.fail > span {
+  color: red;
+}
+#response > span {
   font-size: 30px;
-  font-family: "Courier New", Courier, monospace;
-}/*# sourceMappingURL=js_clock.css.map */
+  font-weight: 700;
+  color: blue;
+}/*# sourceMappingURL=js_number_to_level.css.map */
