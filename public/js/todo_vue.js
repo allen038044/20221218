@@ -53,21 +53,22 @@ createApp({
             this.save();
         },
         restore() {
-            try {
-                let todo = localStorage.getItem(this.storageKey);
-                if (!todo) {
-                    todo = [];
-                } else {
-                    todo = JSON.parse(todo);
-                }
-                this.items = todo;
-            } catch (e) {
-                this.items = [];
-            }
+            // try {
+            //     let todo = localStorage.getItem(this.storageKey);
+            //     if (!todo) {
+            //         todo = [];
+            //     } else {
+            //         todo = JSON.parse(todo);
+            //     }
+            //     this.items = todo;
+            // } catch (e) {
+            //     this.items = [];
+            // }
         },
         save() {
-            let data = JSON.stringify(this.items);
-            localStorage.setItem(this.storageKey, data);
+            // let data = JSON.stringify(this.items);
+            // localStorage.setItem(this.storageKey, data);
+            write(this.items, 'todo');
         },
         doSaveCloud() {
             Swal.fire({
@@ -122,5 +123,12 @@ createApp({
     },
     mounted() {
         this.restore();
+        listen('todo', (value) => {
+            console.table(value);
+            if (!value) {
+                value = [];
+            }
+            this.items = value;
+        })
     }
 }).mount('#app')
